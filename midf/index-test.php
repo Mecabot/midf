@@ -12,4 +12,5 @@ $config=dirname(__FILE__).'/protected/config/test.php';
 defined('YII_DEBUG') or define('YII_DEBUG',true);
 
 require_once($yii);
+require_once('protected/config/credentials.php');  // access data file
 Yii::createWebApplication($config)->run();

@@ -1,3 +1,4 @@
 .idea
 midf/protected/config/credentials.php
 midf/assets/*
+midf/protected/runtime/application.log

@@ -2,8 +2,16 @@
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name;
-?>
+$denuncias = Denuncias::model()->findAll();
 
+if (null !== $denuncias) {
+    $dbTest = true;
+} else {
+    $dbTest = false;
+}
+
+?>
+<?= $dbTest ? 'Database working!!' : 'DB error' ?>
 <h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
 <p>Congratulations! You have successfully created your Yii application.</p>

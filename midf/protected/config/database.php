@@ -3,12 +3,9 @@
 // This is the database connection configuration.
 return array(
 	'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-	// uncomment the following lines to use a MySQL database
-	/*
-	'connectionString' => 'mysql:host=localhost;dbname=testdrive',
+	'connectionString' => 'mysql:host=localhost;dbname=' . DB_NAME,
 	'emulatePrepare' => true,
-	'username' => 'root',
-	'password' => '',
+	'username' => DB_USER,
+	'password' => DB_PASS,
 	'charset' => 'utf8',
-	*/
 );

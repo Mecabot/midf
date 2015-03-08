@@ -18,16 +18,18 @@ Mejora la calidad de vida de los ciudadanos al resolver los problemas que realme
 
 <a name="dependencies"></a>
 ## Dependencias
-La aplicación fue desarrollada y probada en equipos Windows 7 y 8, Google Chrome > 40.x. Para instalar un ambiente de desarrolo local necesitas lo siguiente
+La aplicación fue desarrollada y probada en equipos Windows 7,8 con Google Chrome > 40.x. Para instalar un ambiente de desarrolo local necesitas lo siguiente
 
-* **Xampp:** [Xampp](https://www.apachefriends.org/download.html) es una distribución de Apache completamente gratuita y fácil de instalar que contiene MySQL, PHP.
-* **MySQL Workbench:** [Workbench](http://dev.mysql.com/downloads/workbench/), [IDE](http://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado) OpenSource que te permite interactuar con servidores de Bases de Datos de manera sencilla y eficiente.
-* **Data dump:** [Descarga](http://bi.linio.com/hack/dump.zip) una copia de las bases de datos utilizadas.
+* **Xampp:** [Xampp](https://www.apachefriends.org/download.html) es una distribución de Apache completamente gratuita y fácil de instalar que contiene MySQL y PHP.
+* **MySQL Workbench:** [Workbench](http://dev.mysql.com/downloads/workbench/) es un [IDE](http://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado) OpenSource que te permite interactuar con servidores de Bases de Datos de manera sencilla y eficiente.
+* **Data dump:** [Descarga](http://bi.linio.com/hack/dump.zip) una copia de las bases de datos utilizadas por este proyecto.
 
 <a name="config"></a>
 ## Configuración
 La única configuración 100% indispensable es que tu copia del código fuente esté en el directorio:
+
 `XAMPP_INST_DIR\htdocs`
+
 donde **XAMPP_INST_DIR** en el *path* donde instalaste Xampp.
 
 <a name="config-local"></a>
@@ -38,31 +40,29 @@ donde **XAMPP_INST_DIR** en el *path* donde instalaste Xampp.
 ### Datos
 Ingresa a tu BD local que instalaste con Xampp e importa los datos siguiendo estos pasos:
     
-Descomprime el zip que descargaste anteriormente en una locación que sea accesible por cualquier usuario.
+* Descomprime el zip que descargaste anteriormente en una locación que sea accesible por cualquier usuario.
 
-En *Workbench* haz clic en la opción **Import Data**
+* En *Workbench* haz clic en la opción **Import Data**
 <div align="center"><img src="http://bi.linio.com/hack/screen1.png"></div>
 
 después selecciona **Import from Self-Contained File**
 <div align="center"><img src="http://bi.linio.com/hack/screen2.png"></div>
 
-Por último haz clic en el botón **Start Import** y espera a que la importación termine.
+* Por último haz clic en el botón **Start Import** y espera a que la importación termine.
 
 Por seguridad el archivo que contiene las credenciales para acceder a la bd debe estar fuera del repositorio público. Dentro de tu carpeta raíz del proyecto crea un archivo con el nombre **credentials.php** en la siguiente ruta:
+
 `XAMPP_INST_DIR\htdocs\midf\midf\protected\config\credentials.php`
 
 en ese archivo escribe los parámetros de conexión a tu BD local, por ejemplo:
 ```
 <?php
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'miiyosto_hackdf');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+  define('DB_HOST', 'localhost');
+  define('DB_NAME', 'miiyosto_hackdf');
+  define('DB_USER', 'root');
+  define('DB_PASS', '');
 ?>
 ```
-
-Con estos pasos ya tienes todo lo necesario para comenzar a trabajar, para acceder al proyecto ve a la URL:
-`htt´://localhost/midf/midf`
 
 ### Directorios del proyecto
       framework/           archivos del framework
@@ -70,3 +70,9 @@ Con estos pasos ya tienes todo lo necesario para comenzar a trabajar, para acced
       midf/css             archivos CSS para el proyecto MiDF
       midf/js              scripts
       midf/images          imágenes del proyecto
+      
+
+<a name="show"></a>
+## Despliegue
+para acceder al proyecto ve a la URL:
+`http´://localhost/midf/midf`

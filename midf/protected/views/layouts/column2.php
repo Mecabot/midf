@@ -7,7 +7,6 @@
             <li><a href="#">Nuevo reporte</a></li>
             <li><a href="index.php?r=estadisticas">Estadísticas</a></li>
             <li><a href="#">Seguimiento</a></li>
-            <li class="divider"></li>
             <li><a href="#">Lo más reportado</a></li>
         </ul>
     </nav>

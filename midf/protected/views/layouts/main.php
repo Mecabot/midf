@@ -45,7 +45,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../" class="navbar-brand">MiDF</a>
+                <a href="<?= Yii::app()->request->baseUrl ?>" class="navbar-brand" style="padding:0">
+                    <img src="images/logo.png" />
+                </a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse">
                 <?php $categories = Categories::model()->findAllByAttributes(['parent_category' => null]); ?>

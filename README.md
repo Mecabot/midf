@@ -25,6 +25,8 @@ Nuestro proyecto es 100% Software Libre liberado bajo [Licencia BSD](http://es.w
 * [JQuery Foundation](http://jquery.com/)
 * [Bootstrap Core Team](https://github.com/orgs/twbs/people)
 * [Xdebug Project](http://xdebug.org/)
+* [CartoDB](http://cartodb.com/)
+
 
 La aplicación fue desarrollada y probada en equipos Windows 7,8 con Google Chrome > 40.x. Para instalar un ambiente de desarrolo local necesitas lo siguiente
 
@@ -38,7 +40,7 @@ La única configuración 100% indispensable es que tu copia del código fuente e
 
 `XAMPP_INST_DIR\htdocs`
 
-donde **XAMPP_INST_DIR** en el *path* donde instalaste Xampp.
+donde **XAMPP_INST_DIR** es el *path* donde instalaste Xampp.
 
 <a name="config-local"></a>
 ## Configuración de desarrollo local

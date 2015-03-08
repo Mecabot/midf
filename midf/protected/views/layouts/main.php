@@ -71,14 +71,14 @@
                     <button type="submit" class="btn btn-default">Buscar</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="index.php?r=acercade/ayuda">Ayuda</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Acerca de<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">¿Quiénes somos?</a></li>
-                            <li><a href="#">¿Por qué este proyecto?</a></li>
+                            <li><a href="index.php?r=acercade/quienes_somos">¿Quiénes somos?</a></li>
+                            <li><a href="index.php?r=acercade/proyecto">¿Por qué este proyecto?</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">¡Contáctanos!</a></li>
+                            <li><a href="index.php?r=acercade/contacto">¡Contáctanos!</a></li>
                         </ul>
                     </li>
                 </ul>

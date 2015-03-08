@@ -4,7 +4,7 @@
 <div class="col-md-3" role="complementary">
     <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
         <ul class="nav bs-docs-sidenav">
-            <li><a href="#">Nuevo reporte</a></li>
+            <li><a href="<?= Yii::app()->getUrlManager()->createUrl('report') ?>">Nuevo reporte</a></li>
             <li><a href="index.php?r=estadisticas">Estadísticas</a></li>
             <li><a href="index.php?r=seguimiento/uno">Seguimiento</a></li>
             <li class="divider"></li>
@@ -14,6 +14,16 @@
 </div>
 
 <div class="col-md-9" role="main">
+    <?php if ('' !== $this->getPageTitle()): ?>
+    <h3><?= $this->getPageTitle(); ?></h3>
+    <?php endif; ?>
+
+    <?php foreach(Yii::app()->user->getFlashes() as $key => $message): ?>
+        <div class="alert alert-<?= $key ?>" role="alert">
+            <?= $message ?>
+        </div>
+    <?php endforeach; ?>
+
     <?= $content ?>
 </div>
 

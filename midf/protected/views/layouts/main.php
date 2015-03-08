@@ -1,3 +1,4 @@
+<?php /** @var Controller $this */ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +10,13 @@
     <title>
         Reportes ciudadanos
     </title>
-    <link href="<?= Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="icon" href="<?= Yii::app()->request->baseUrl; ?>/images/favicon.ico" type="image/x-icon">
+    <link href="<?= Yii::app()->request->baseUrl; ?>/css/bootstrap.css" rel="stylesheet">
     <link href="data:text/css;charset=utf-8," data-href="<?= Yii::app()->request->baseUrl; ?>/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
     <link href="<?= Yii::app()->request->baseUrl; ?>/css/docs.min.css" rel="stylesheet">
+    <link href="<?= Yii::app()->request->baseUrl; ?>/css/sb-admin-2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
 
     <!--[if lt IE 9]><script src="<?= Yii::app()->request->baseUrl; ?>/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="<?= Yii::app()->request->baseUrl; ?>/js/ie-emulation-modes-warning.js"></script>
@@ -22,9 +27,6 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="icon" href="/favicon.ico">
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -50,14 +52,12 @@
                 </a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse">
-                <?php $categories = Categories::model()->findAllByAttributes(['parent_category' => null]); ?>
                 <ul class="nav navbar-nav">
-                <?php foreach ($categories as $cat1): ?>
-                    <?php $cat2 = Categories::model()->findAllByAttributes(['parent_category' => $cat1->id]); ?>
+                <?php foreach ($this->getCat1() as $cat1): ?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><?= $cat1->name ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <?php foreach ($cat2 as $cat): ?>
+                            <?php foreach ($this->getCat2($cat1->id) as $cat): ?>
                                 <li><a href="<?= "category/{$cat1->id}"?>"><?= $cat->name ?></a></li>
                             <?php endforeach; ?>
                         </ul>
@@ -90,17 +90,9 @@
     <div class="bs-docs-header" id="content">
         <div class="container">
             <h1>Reportes ciudadanos</h1>
-            <p>Mejora la calidad de vida del ciudadano al resolver los problemas cotidianos que le importan</p>
-            <div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script>var z = document.createElement("script"); z.async = true; z.src = "http://engine.carbonads.com/z/32341/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
+            <p>Reporta, mide y mejora</p>
         </div>
     </div>
-
-    <div class="container bs-docs-container">
-        <div class="row">
-            <?= $content ?>
-        </div>
-    </div>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="<?= Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
@@ -129,6 +121,12 @@
             s.parentNode.insertBefore(t, s);
         })();
     </script>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+            <?= $content ?>
+        </div>
+    </div>
 
 </body>
 </html>

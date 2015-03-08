@@ -63,4 +63,17 @@
             </div>
         </div>
     </div>
+
+    <div class="col-xs-6 col-md-4">
+        <a data-toggle="modal" href="#status-map6" class="thumbnail">
+            <img src="images/estadisticas/medio_ambiente_denuncias.png" alt="...">
+        </a>
+        <div class="modal" id="status-map6">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <img src="<?= Yii::app()->request->baseUrl; ?>/images/estadisticas/medio_ambiente_denuncias.png" class="img-responsive" alt="Daily status">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -6,7 +6,7 @@
         <ul class="nav bs-docs-sidenav">
             <li><a href="<?= Yii::app()->getUrlManager()->createUrl('report') ?>"><i class="fa fa-plus fa-left"></i>Nuevo reporte</a></li>
             <li><a href="index.php?r=seguimiento/uno"><i class="fa fa-exchange fa-left"></i>Seguimiento</a></li>
-            <li><a href="#"><i class="fa fa-line-chart fa-left"></i>Lo más reportado</a></li>
+            <li><a href="index.php?r=lomasreportado"><i class="fa fa-line-chart fa-left"></i>Lo más reportado</a></li>
         </ul>
     </nav>
 </div>

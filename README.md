@@ -18,6 +18,14 @@ Mejora la calidad de vida de los ciudadanos al resolver los problemas que realme
 
 <a name="dependencies"></a>
 ## Dependencias
+Nuestro proyecto es 100% Software Libre liberado bajo los términos de [Licencia BSD](http://es.wikipedia.org/wiki/Licencia_BSD), nada de esto hubiera sido posible sin el apoyo de otros proyectos, por mencionar algunos:
+* [PHP Project](http://php.net/)
+* [MySQL Project](http://www.mysql.com/)
+* [Yii Framework](http://www.yiiframework.com/)
+* [JQuery Foundation](http://jquery.com/)
+* [Bootstrap Core Team](https://github.com/orgs/twbs/people)
+* [Xdebug Project](http://xdebug.org/)
+
 La aplicación fue desarrollada y probada en equipos Windows 7,8 con Google Chrome > 40.x. Para instalar un ambiente de desarrolo local necesitas lo siguiente
 
 * **Xampp:** [Xampp](https://www.apachefriends.org/download.html) es una distribución de Apache completamente gratuita y fácil de instalar que contiene MySQL y PHP.
@@ -55,7 +63,7 @@ Por seguridad el archivo que contiene las credenciales para acceder a la bd debe
 `XAMPP_INST_DIR\htdocs\midf\midf\protected\config\credentials.php`
 
 en ese archivo escribe los parámetros de conexión a tu BD local, por ejemplo:
-```
+```php
 <?php
   define('DB_HOST', 'localhost');
   define('DB_NAME', 'miiyosto_hackdf');
@@ -75,4 +83,4 @@ en ese archivo escribe los parámetros de conexión a tu BD local, por ejemplo:
 <a name="show"></a>
 ## Despliegue
 para acceder al proyecto ve a la URL:
-`http´://localhost/midf/midf`
+`http://localhost/midf/midf`

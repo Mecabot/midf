@@ -9,4 +9,4 @@
 
 <?php $viewFile = 'form/' . strtolower(str_replace(' ', '_', $cat2->name)); ?>
 <?php $exists = $this->getViewFile($viewFile); ?>
-<?php $this->renderPartial($exists ? $viewFile : 'form/default', ['model' => Denuncias::model()]); ?>
+<?php $this->renderPartial($exists ? $viewFile : 'form/default', ['model' => Denuncias::model(), 'cat1' => $cat1->id, 'cat2' => $cat2]); ?>

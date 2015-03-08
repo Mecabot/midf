@@ -29,7 +29,36 @@ class ReportController extends Controller
                 $cat1 = $this->getCat1()[$cat2->parent_category];
                 $this->render('add', ['cat1' => $cat1, 'cat2' => $cat2]);
             } else {
-                $this->render('success', ['folio' => uniqid()]);
+                $model = new Denuncias();
+
+                /** @var CHttpRequest $request */
+                $request = Yii::app()->request;
+
+                $cp = $request->getParam('CP');
+
+                /** @var SepomexDf $location */
+                $location = SepomexDf::model()->findByAttributes(['CP' => $cp]);
+
+                if (null !== $location) {
+                    $model->setAttributes($request->getRestParams());
+                    $model->colonia = $location->Asentamiento;
+                    $model->delegacion = $location->Municipio;
+                    $model->codigo_postal = $location->CP;
+                    $model->updated_at = date('Y-m-d H:i:s');
+                    $model->create_at = date('Y-m-d H:i:s');
+                    $model->num_folio = time();
+                    $model->fk_estatus = 1;
+
+                    // get the location data
+                    if ($model->save()) {
+                        $this->render('success', ['folio' => $model->num_folio]);
+                    } else {
+                        $this->render(' success', ['folio' => $model->num_folio, 'status' => 'error']);
+                    }
+                } else {
+                    Yii::app()->user->setFlash('danger', "Gracias por usar nuestra aplicación pero tu CP <strong>$cp</strong> no pertenece al DF");
+                    return $this->actionIndex();
+                }
             }
         }
     }

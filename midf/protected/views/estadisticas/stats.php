@@ -27,12 +27,12 @@
 
     <div class="col-xs-6 col-md-4">
         <a data-toggle="modal" href="#status-map3" class="thumbnail">
-            <img src="images/estadisticas/denuncias_viales.png" alt="...">
+            <img src="images/estadisticas/vialidad_accidente.png" alt="...">
         </a>
         <div class="modal" id="status-map3">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <img src="<?= Yii::app()->request->baseUrl; ?>/images/estadisticas/zonas_riesgo_viales.png" class="img-responsive" alt="Daily status">
+                    <img src="<?= Yii::app()->request->baseUrl; ?>/images/estadisticas/vialidad_accidente.png" class="img-responsive" alt="Daily status">
                 </div>
             </div>
         </div>
@@ -40,12 +40,12 @@
 
     <div class="col-xs-6 col-md-4">
         <a data-toggle="modal" href="#status-map4" class="thumbnail">
-            <img src="images/estadisticas/denuncias_viajemos_seguras.png" alt="...">
+            <img src="images/estadisticas/sociedad_viajemos_seguras.png" alt="...">
         </a>
         <div class="modal" id="status-map4">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <img src="<?= Yii::app()->request->baseUrl; ?>/images/estadisticas/denuncias_viajemos_seguras.png" class="img-responsive" alt="Daily status">
+                    <img src="<?= Yii::app()->request->baseUrl; ?>/images/estadisticas/sociedad_viajemos_seguras.png" class="img-responsive" alt="Daily status">
                 </div>
             </div>
         </div>
@@ -53,12 +53,12 @@
 
     <div class="col-xs-6 col-md-4">
         <a data-toggle="modal" href="#status-map5" class="thumbnail">
-            <img src="images/estadisticas/zonas_riesgo_viajemos_seguras.png" alt="...">
+            <img src="images/estadisticas/sociedad_viajemos_seguras1.png" alt="...">
         </a>
         <div class="modal" id="status-map5">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <img src="<?= Yii::app()->request->baseUrl; ?>/images/estadisticas/zonas_riesgo_viajemos_seguras.png" class="img-responsive" alt="Daily status">
+                    <img src="<?= Yii::app()->request->baseUrl; ?>/images/estadisticas/sociedad_viajemos_seguras1.png" class="img-responsive" alt="Daily status">
                 </div>
             </div>
         </div>

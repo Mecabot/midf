@@ -5,7 +5,6 @@
     <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
         <ul class="nav bs-docs-sidenav">
             <li><a href="<?= Yii::app()->getUrlManager()->createUrl('report') ?>">Nuevo reporte</a></li>
-            <li><a href="index.php?r=estadisticas">Estadísticas</a></li>
             <li><a href="#">Seguimiento</a></li>
             <li><a href="#">Lo más reportado</a></li>
         </ul>

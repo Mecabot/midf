@@ -58,7 +58,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><?= $cat1->name ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <?php foreach ($this->getCat2($cat1->id) as $cat): ?>
-                                <li><a href="<?= "category/{$cat1->id}"?>"><?= $cat->name ?></a></li>
+                                <li><a href="<?= Yii::app()->getUrlManager()->createUrl("estadisticas&cat={$cat->id}") ?>"><?= $cat->name ?></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </li>

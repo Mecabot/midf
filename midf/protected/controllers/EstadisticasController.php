@@ -8,9 +8,12 @@
 
 class EstadisticasController extends Controller {
 
-    public function actionIndex()
+    public function actionIndex($cat)
     {
-        $this->render('stats');
+        $category = Categories::model()->findByAttributes(['id' => $cat]);
+        $viewFile = 'stats_' . strtolower(str_replace(' ', '_', $category->name));
+        $exists = $this->getViewFile($viewFile);
+        $this->render($exists ? $viewFile :'stats');
     }
 
 }

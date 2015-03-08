@@ -1673,3 +1673,7 @@ h1[id] {
 .modal-dialog {
     width: 90%;
 }
+
+.fa-left {
+    padding-right: 6px;
+}

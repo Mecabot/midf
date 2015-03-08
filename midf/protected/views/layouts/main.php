@@ -1,3 +1,4 @@
+<?php /** @var Controller $this */ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,14 +52,12 @@
                 </a>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse">
-                <?php $categories = Categories::model()->findAllByAttributes(['parent_category' => null]); ?>
                 <ul class="nav navbar-nav">
-                <?php foreach ($categories as $cat1): ?>
-                    <?php $cat2 = Categories::model()->findAllByAttributes(['parent_category' => $cat1->id]); ?>
+                <?php foreach ($this->getCat1() as $cat1): ?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><?= $cat1->name ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <?php foreach ($cat2 as $cat): ?>
+                            <?php foreach ($this->getCat2($cat1->id) as $cat): ?>
                                 <li><a href="<?= "category/{$cat1->id}"?>"><?= $cat->name ?></a></li>
                             <?php endforeach; ?>
                         </ul>
@@ -95,13 +94,6 @@
         </div>
     </div>
 
-    <div class="container bs-docs-container">
-        <div class="row">
-            <?= $content ?>
-        </div>
-    </div>
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="<?= Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
     <script src="<?= Yii::app()->request->baseUrl; ?>/js/docs.min.js"></script>
@@ -129,6 +121,12 @@
             s.parentNode.insertBefore(t, s);
         })();
     </script>
+
+    <div class="container bs-docs-container">
+        <div class="row">
+            <?= $content ?>
+        </div>
+    </div>
 
 </body>
 </html>

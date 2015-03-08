@@ -22,7 +22,7 @@ La aplicación fue desarrollada y probada en equipos Windows 7,8 con Google Chro
 
 * **Xampp:** [Xampp](https://www.apachefriends.org/download.html) es una distribución de Apache completamente gratuita y fácil de instalar que contiene MySQL y PHP.
 * **MySQL Workbench:** [Workbench](http://dev.mysql.com/downloads/workbench/) es un [IDE](http://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado) OpenSource que te permite interactuar con servidores de Bases de Datos de manera sencilla y eficiente.
-* **Data dump:** [Descarga](http://bi.linio.com/hack/dump.zip) una copia de las bases de datos utilizadas por este proyecto.
+* **Data dump:** [Descarga](https://dl.dropboxusercontent.com/u/74116385/miDF/database.zip) una copia de las bases de datos utilizadas por este proyecto.
 
 <a name="config"></a>
 ## Configuración
@@ -43,10 +43,10 @@ Ingresa a tu BD local que instalaste con Xampp e importa los datos siguiendo est
 * Descomprime el zip que descargaste anteriormente en una locación que sea accesible por cualquier usuario.
 
 * En *Workbench* haz clic en la opción **Import Data**
-<div align="center"><img src="https://www.dropbox.com/s/dodfr3f2sfciob3/screen1.PNG"></div>
+<div align="center"><img src="https://dl.dropboxusercontent.com/u/74116385/miDF/screen1.png"></div>
 
 después selecciona **Import from Self-Contained File**
-<div align="center"><img src="http://bi.linio.com/hack/screen2.png"></div>
+<div align="center"><img src="https://dl.dropboxusercontent.com/u/74116385/miDF/screen2.png"></div>
 
 * Por último haz clic en el botón **Start Import** y espera a que la importación termine.
 

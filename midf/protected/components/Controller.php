@@ -21,8 +21,50 @@ class Controller extends CController
 	 */
 	public $breadcrumbs=array();
 
+    /**
+     * @var Categories[] save all the cat1
+     */
+    protected $cat1;
+
+    /**
+     * @var Categories[] save all the cat2
+     */
+    protected $cat2 = [];
+
+    /**
+     * @inheritdoc
+     */
     public function init()
     {
+        // there is not any title per default
         $this->setPageTitle('');
     }
+
+    /**
+     * Get all the first level categories
+     * @return array|Categories[]|mixed|null|static
+     */
+    protected function getCat1()
+    {
+        if (null === $this->cat1) {
+            foreach (Categories::model()->findAllByAttributes(['parent_category' => null]) as $cat) {
+                $this->cat1[$cat->id] = $cat;
+            }
+        }
+        return $this->cat1;
+    }
+
+    /**
+     * Get all the second level categories
+     * @param $cat1Id
+     * @return array|Categories[]|mixed|null|static
+     */
+    protected function getCat2($cat1Id)
+    {
+        if (!isset($this->cat2[$cat1Id]) || empty($this->cat2[$cat1Id])) {
+            $this->cat2[$cat1Id] = Categories::model()->findAllByAttributes(['parent_category' => $cat1Id], ['order' => 'name']);
+        }
+        return $this->cat2[$cat1Id];
+    }
+
 }

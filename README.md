@@ -18,7 +18,7 @@ Mejora la calidad de vida de los ciudadanos al resolver los problemas que realme
 
 <a name="dependencies"></a>
 ## Dependencias
-Nuestro proyecto es 100% Software Libre liberado bajo los términos de [Licencia BSD](http://es.wikipedia.org/wiki/Licencia_BSD), nada de esto hubiera sido posible sin el apoyo de otros proyectos, por mencionar algunos:
+Nuestro proyecto es 100% Software Libre liberado bajo [Licencia BSD](http://es.wikipedia.org/wiki/Licencia_BSD), nada de esto hubiera sido posible sin el apoyo de otros proyectos, por mencionar algunos:
 * [PHP Project](http://php.net/)
 * [MySQL Project](http://www.mysql.com/)
 * [Yii Framework](http://www.yiiframework.com/)
@@ -53,12 +53,12 @@ Ingresa a tu BD local que instalaste con Xampp e importa los datos siguiendo est
 * En *Workbench* haz clic en la opción **Import Data**
 <div align="center"><img src="https://dl.dropboxusercontent.com/u/74116385/miDF/screen1.png"></div>
 
-después selecciona **Import from Self-Contained File**
+haz clic en **Import from Self-Contained File** y selecciona el archivo descomprimido en el paso anterior
 <div align="center"><img src="https://dl.dropboxusercontent.com/u/74116385/miDF/screen2.png"></div>
 
 * Por último haz clic en el botón **Start Import** y espera a que la importación termine.
 
-Por seguridad el archivo que contiene las credenciales para acceder a la bd debe estar fuera del repositorio público. Dentro de tu carpeta raíz del proyecto crea un archivo con el nombre **credentials.php** en la siguiente ruta:
+Por seguridad el archivo que contiene las credenciales para acceder a la bd debe estar fuera del repositorio público. Dentro de tu carpeta raíz del proyecto crea un archivo con el nombre **credentials.php**, la ruta absuluta es:
 
 `XAMPP_INST_DIR\htdocs\midf\midf\protected\config\credentials.php`
 
@@ -84,3 +84,5 @@ en ese archivo escribe los parámetros de conexión a tu BD local, por ejemplo:
 ## Despliegue
 para acceder al proyecto ve a la URL:
 `http://localhost/midf/midf`
+
+por último recuerda, *Keep Calm and Happy Coding*

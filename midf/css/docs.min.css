@@ -1651,6 +1651,12 @@ h1[id] {
     padding: 1% 2% 0 0;
 }
 
+[role=main] > h3 {
+    margin:0 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
 .bs-docs-sidebar ul li {
     border-bottom: 1px solid #e7e7e7;
 }
@@ -1658,4 +1664,12 @@ h1[id] {
 .bs-docs-sidebar ul li a.active {
     background-color: #eee;
     font-weight: bold;
+}
+
+.panel-footer {
+    padding: 3px 5px 1px 8px;
+}
+
+.modal-dialog {
+    width: 90%;
 }

@@ -43,7 +43,7 @@ Ingresa a tu BD local que instalaste con Xampp e importa los datos siguiendo est
 * Descomprime el zip que descargaste anteriormente en una locación que sea accesible por cualquier usuario.
 
 * En *Workbench* haz clic en la opción **Import Data**
-<div align="center"><img src="http://bi.linio.com/hack/screen1.png"></div>
+<div align="center"><img src="https://www.dropbox.com/s/dodfr3f2sfciob3/screen1.PNG"></div>
 
 después selecciona **Import from Self-Contained File**
 <div align="center"><img src="http://bi.linio.com/hack/screen2.png"></div>

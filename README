@@ -1,64 +1,72 @@
-Yii Web Programming Framework
-=============================
+# MiDF Web Application and Back-end
 
-Thank you for choosing Yii - a high-performance component-based PHP framework.
+Promueve y facilita la participación de los ciudadanos en las acciones del gobierno (reportes a través de un único medio). Sensibiliza al gobierno sobre los temas cotidianos que le importan a la ciudadanía y que tienen un impacto inmediato en su calidad de vida.
 
+Facilita la toma de decisiones y ofrece una manera de priorizar el gasto de los recursos públicos ("retweet" de los reportes). Permite el monitoreo de la actividad gubernamental por parte de la sociedad (seguimiento de los reportes por número de folio).
 
-INSTALLATION
-------------
+Ofrece una herramienta para medir y comparar la eficacia y eficiencia en la resolución de problemas similares entre sucursales de las agencias y entre delegaciones (benchmarking) y ofrece la oportunidad de localizar (y adoptar) las mejores prácticas.
 
-Please make sure the release file is unpacked under a Web-accessible
-directory. You shall see the following files and directories:
-
-      demos/               demos
-      framework/           framework source files
-      requirements/        requirement checker
-      CHANGELOG            describing changes in every Yii release
-      LICENSE              license of Yii
-      README               this file
-      UPGRADE              upgrading instructions
+Mejora la calidad de vida de los ciudadanos al resolver los problemas que realmente le importan. Le da al ciudadano un sentido de pertenencia y lo coloca en el centro de la acción pública.
 
 
-REQUIREMENTS
-------------
+## Índice de contenido
 
-The minimum requirement by Yii is that your Web server supports
-PHP 5.1.0 or above. Yii has been tested with Apache HTTP server
-on Windows and Linux operating systems.
+- [Dependencias](#dependencies)
+- [Configuración](#config)
+- [Configuración de desarrollo local](#config-local)
+- [Despliegue](#show)
 
-Please access the following URL to check if your Web server reaches
-the requirements by Yii, assuming "YiiPath" is where Yii is installed:
+<a name="dependencies"></a>
+## Dependencias
+La aplicación fue desarrollada y probada en equipos Windows 7 y 8, Google Chrome > 40.x. Para instalar un ambiente de desarrolo local necesitas lo siguiente
 
-      http://hostname/YiiPath/requirements/index.php
+* **Xampp:** [Xampp](https://www.apachefriends.org/download.html) es una distribución de Apache completamente gratuita y fácil de instalar que contiene MySQL, PHP.
+* **MySQL Workbench:** [Workbench](http://dev.mysql.com/downloads/workbench/), [IDE](http://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado) OpenSource que te permite interactuar con servidores de Bases de Datos de manera sencilla y eficiente.
+* **Data dump:** [Descarga](http://bi.linio.com/hack/dump.zip) una copia de las bases de datos utilizadas.
 
+<a name="config"></a>
+## Configuración
+La única configuración 100% indispensable es que tu copia del código fuente esté en el directorio:
+`XAMPP_INST_DIR\htdocs`
+donde **XAMPP_INST_DIR** en el *path* donde instalaste Xampp.
 
-QUICK START
------------
+<a name="config-local"></a>
+## Configuración de desarrollo local
+### Código fuente
+[Clona](http://gitref.org/creating/#clone), [haz un *fork*](https://help.github.com/articles/fork-a-repo) o descarga un zip de [nuestro proyecto](https://github.com/saul-mtz/midf).
 
-Yii comes with a command line tool called "yiic" that can create
-a skeleton Yii application for you to start with.
+### Datos
+Ingresa a tu BD local que instalaste con Xampp e importa los datos siguiendo estos pasos:
 
-On command line, type in the following commands:
+Descomprime el zip que descargaste anteriormente en una locación que sea accesible por cualquier usuario.
 
-        $ cd YiiPath/framework                (Linux)
-        cd YiiPath\framework                  (Windows)
+En *Workbench* haz clic en la opción **Import Data**
+<div align="center"><img src="http://bi.linio.com/hack/screen1.png"></div>
 
-        $ ./yiic webapp ../testdrive          (Linux)
-        yiic webapp ..\testdrive              (Windows)
+después selecciona **Import from Self-Contained File**
+<div align="center"><img src="http://bi.linio.com/hack/screen2.png"></div>
 
-The new Yii application will be created at "YiiPath/testdrive".
-You can access it with the following URL:
+Por último haz clic en el botón **Start Import** y espera a que la importación termine.
 
-        http://hostname/YiiPath/testdrive/index.php
+Por seguridad el archivo que contiene las credenciales para acceder a la bd debe estar fuera del repositorio público. Dentro de tu carpeta raíz del proyecto crea un archivo con el nombre **credentials.php** en la siguiente ruta:
+`XAMPP_INST_DIR\htdocs\midf\midf\protected\config\credentials.php`
 
+en ese archivo escribe los parámetros de conexión a tu BD local, por ejemplo:
+```
+<?php
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'miiyosto_hackdf');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+?>
+```
 
-WHAT's NEXT
------------
+Con estos pasos ya tienes todo lo necesario para comenzar a trabajar, para acceder al proyecto ve a la URL:
+`htt´://localhost/midf/midf`
 
-Please visit the project website for tutorials, class reference
-and join discussions with other Yii users.
-
-
-
-The Yii Developer Team
-http://www.yiiframework.com
+### Directorios del proyecto
+      framework/           archivos del framework
+      midf/                archivos del proyecto actual
+      midf/css             archivos CSS para el proyecto MiDF
+      midf/js              scripts
+      midf/images          imágenes del proyecto
